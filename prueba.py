@@ -1,8 +1,8 @@
 import datetime
 import random
 
-poblacion = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ, '
-cadena = 'Ingenieria Informatica, inteligencia artificial'
+poblacion = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚáéíóú, '
+cadena = 'Ingeniería Informática, inteligencia artificial'
 
 random.seed(2)
 
