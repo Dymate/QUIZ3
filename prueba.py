@@ -5,12 +5,13 @@ diccionario = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ, '
 cadena = 'Ingenieria Informatica, inteligencia artificial'
 
 random.seed(2)
+
 startTime = datetime.datetime.now() 
 
-print("    Aproximación\t                       Generación\tTiempo")
+print("    Aproximación\t                                  Generación\t      Tiempo")
 
 
-#Generar aleatoriamente los genes definiendo la POBLACION
+#Generar aleatoriamente los genes definidos en la poblacion
 def generarPadre(tamaño):
     genes = [] #se almacena la secuencia aleatoria de genes
     while len(genes) < tamaño: 
@@ -39,7 +40,7 @@ def mutacion(padre):
 def display(aproximacion):
     timeDiff = datetime.datetime.now() - startTime
     fitness = obtenerFitness(aproximacion)
-    print('{}\t{}\t{}'.format(aproximacion,fitness,timeDiff))
+    print('{}  \t    {}   \t    {}'.format(aproximacion,fitness,timeDiff))
 
 
 #Inicializar parametros
