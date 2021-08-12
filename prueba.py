@@ -1,7 +1,7 @@
 import datetime
 import random
 
-diccionario = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ, '
+poblacion = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ, '
 cadena = 'Ingenieria Informatica, inteligencia artificial'
 
 random.seed(2)
@@ -15,8 +15,8 @@ print("Generación\t                     Cruce\t                        Tiempo")
 def generarPadre(tamaño):
     genes = [] #se almacena la secuencia aleatoria de genes
     while len(genes) < tamaño: 
-        sampleSize = min(tamaño - len(genes), len(diccionario))
-        genes.extend(random.sample(diccionario,sampleSize)) #se obtiene la muestra de la poblacion aleatoria 
+        sampleSize = min(tamaño - len(genes), len(poblacion))
+        genes.extend(random.sample(poblacion,sampleSize)) #se obtiene la muestra de la poblacion aleatoria 
     return ''.join(genes) #se devuelve una cadena 
     
 
@@ -31,7 +31,7 @@ def obtenerFitness(aproximacion):
 def mutacion(padre):
     index = random.randrange(0,len(padre))
     genesHijos = list(padre)
-    newGene, alternate = random.sample(diccionario,2)
+    newGene, alternate = random.sample(poblacion,2)
     genesHijos[index] = alternate if newGene == genesHijos[index] else newGene
     return ''.join(genesHijos)
 
