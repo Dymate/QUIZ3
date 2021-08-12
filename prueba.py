@@ -3,7 +3,7 @@ import random
 
 poblacion = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚáéíóú, '
 cadena = 'Ingeniería Informática, inteligencia artificial'
-
+ 
 random.seed(2)
 
 startTime = datetime.datetime.now() 
