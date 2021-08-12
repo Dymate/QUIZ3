@@ -8,7 +8,7 @@ random.seed(2)
 
 startTime = datetime.datetime.now() 
 
-print("    Aproximación\t                                  Generación\t      Tiempo")
+print("Generación\t                     Cruce\t                        Tiempo")
 
 
 #Generar aleatoriamente los genes definidos en la poblacion
@@ -40,7 +40,7 @@ def mutacion(padre):
 def display(aproximacion):
     timeDiff = datetime.datetime.now() - startTime
     fitness = obtenerFitness(aproximacion)
-    print('{}  \t    {}   \t    {}'.format(aproximacion,fitness,timeDiff))
+    print('{}  \t    {}   \t    {}'.format(fitness,aproximacion,timeDiff))
 
 
 #Inicializar parametros
